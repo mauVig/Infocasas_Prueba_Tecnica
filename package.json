@@ -11,7 +11,7 @@
     "install:backend": "cd backend && composer install",
     "install:frontend": "cd frontend && npm install",
     "install:full": "npm run install:backend && npm run install:frontend",
-    "backend:start": "cd backend && php artisan migrate:fresh --seed && php artisan serve",
+    "backend:start": "cd backend && php artisan migrate:fresh --seed --force && php artisan serve",
     "frontend:dev": "cd frontend && npm run dev",
     "start:dev": "concurrently \"npm run frontend:dev\" \"npm run backend:start\"",
     "dev:full": "npm install && npm run install:full && npm run start:dev"
